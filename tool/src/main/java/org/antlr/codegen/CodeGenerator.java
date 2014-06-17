@@ -1087,7 +1087,7 @@ public class CodeGenerator {
 		catch (Exception tse) {
 			ErrorManager.internalError("can't parse template action",tse);
 		}
-		GrammarAST rewriteTree = parseResult.getTree();
+		GrammarAST rewriteTree = (GrammarAST)parseResult.getTree();
 
 		// then translate via codegen.g
 		CodeGenTreeWalker gen = new CodeGenTreeWalker(new CommonTreeNodeStream(rewriteTree));

@@ -706,7 +706,7 @@ public class Grammar {
 			}
 		}
 
-		setGrammarTree(result.getTree());
+		setGrammarTree((GrammarAST)result.getTree());
 
 		//if ( grammarTree!=null ) System.out.println("grammar tree: "+grammarTree.toStringTree());
 
@@ -927,7 +927,7 @@ public class Grammar {
 		parser.setGrammarType(this.type);
 		try {
 			ANTLRParser.rule_return result = parser.rule();
-			return result.getTree();
+			return (GrammarAST)result.getTree();
 		}
 		catch (Exception e) {
 			ErrorManager.error(ErrorManager.MSG_ERROR_CREATING_ARTIFICIAL_RULE,
