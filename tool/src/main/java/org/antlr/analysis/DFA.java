@@ -57,7 +57,7 @@ public class DFA {
 	 */
 
 	/** Set to 0 to not terminate early (time in ms) */
-	public static int MAX_TIME_PER_DFA_CREATION = 1*1000;
+	public static int MAX_TIME_PER_DFA_CREATION = 30*1000;
 
 	/** How many edges can each DFA state have before a "special" state
 	 *  is created that uses IF expressions instead of a table?
